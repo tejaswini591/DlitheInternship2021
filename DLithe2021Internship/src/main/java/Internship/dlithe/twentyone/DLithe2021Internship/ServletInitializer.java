@@ -1,4 +1,3 @@
-
 package Internship.dlithe.twentyone.DLithe2021Internship;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -10,5 +9,4 @@ public class ServletInitializer extends SpringBootServletInitializer {
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 		return application.sources(DLithe2021InternshipApplication.class);
 	}
-
 }
