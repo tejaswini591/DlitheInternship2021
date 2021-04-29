@@ -1,4 +1,4 @@
-package Internship.dlithe.twentyone.DLithe2021Internship;
+package Internship.dlithe.twentyone.DLithe2021Internship.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,52 +9,49 @@ import javax.persistence.Table;
 
 @Entity
 //@Table(name = "holder")
-public class Account {
-	
+public class Account 
+{
 	@Id @GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "number")
-	private Long accnumb;
-	private String accholer, pan, adress, email, accounttype, password;
+	@Column(name="number")
+	private Long accNum;
+	private String accHolder, pan, address, email, accountType, password;
 	private Long contact;
 	private Double balance;
 	
+	// object to console
 	@Override
 	public String toString() {
-		return "Account [accnumb=" + accnumb + ", accholer=" + accholer + ", pan=" + pan + ", adress=" + adress
-				+ ", email=" + email + ", accounttype=" + accounttype + ", password=" + password + ", contact="
+		return "Account [accNum=" + accNum + ", accHolder=" + accHolder + ", pan=" + pan + ", address=" + address
+				+ ", email=" + email + ", accountType=" + accountType + ", password=" + password + ", contact="
 				+ contact + ", balance=" + balance + "]";
 	}
-
 	public Account() {
-		
 		// TODO Auto-generated constructor stub
 	}
-
-	public Account(Long accnumb, String accholer, String pan, String adress, String email, String accounttype,
+	public Account(Long accNum, String accHolder, String pan, String address, String email, String accountType,
 			String password, Long contact, Double balance) {
 		super();
-		this.accnumb = accnumb;
-		this.accholer = accholer;
+		this.accNum = accNum;
+		this.accHolder = accHolder;
 		this.pan = pan;
-		this.adress = adress;
+		this.address = address;
 		this.email = email;
-		this.accounttype = accounttype;
+		this.accountType = accountType;
 		this.password = password;
 		this.contact = contact;
 		this.balance = balance;
 	}
-	
-	public Long getAccnumb() {
-		return accnumb;
+	public Long getAccNum() {
+		return accNum;
 	}
-	public void setAccnumb(Long accnumb) {
-		this.accnumb = accnumb;
+	public void setAccNum(Long accNum) {
+		this.accNum = accNum;
 	}
-	public String getAccholer() {
-		return accholer;
+	public String getAccHolder() {
+		return accHolder;
 	}
-	public void setAccholer(String accholer) {
-		this.accholer = accholer;
+	public void setAccHolder(String accHolder) {
+		this.accHolder = accHolder;
 	}
 	public String getPan() {
 		return pan;
@@ -62,11 +59,11 @@ public class Account {
 	public void setPan(String pan) {
 		this.pan = pan;
 	}
-	public String getAdress() {
-		return adress;
+	public String getAddress() {
+		return address;
 	}
-	public void setAdress(String adress) {
-		this.adress = adress;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	public String getEmail() {
 		return email;
@@ -74,11 +71,11 @@ public class Account {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getAccounttype() {
-		return accounttype;
+	public String getAccountType() {
+		return accountType;
 	}
-	public void setAccounttype(String accounttype) {
-		this.accounttype = accounttype;
+	public void setAccountType(String accountType) {
+		this.accountType = accountType;
 	}
 	public String getPassword() {
 		return password;
@@ -98,5 +95,4 @@ public class Account {
 	public void setBalance(Double balance) {
 		this.balance = balance;
 	}
-
 }
